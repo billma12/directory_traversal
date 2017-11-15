@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def search_directory(root_dir, keyword):
     '''performs dfs search on a directory searching for files
-       that contain a keyword'''
+       that contain a keyword and returns the count'''
     res = {}
     for root, dirs, files in os.walk(root_dir):
         count = 0
