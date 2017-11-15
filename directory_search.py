@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 import matplotlib.pyplot as plt
 
 
@@ -9,7 +10,7 @@ def search_directory(root_dir, keyword):
     for root, dirs, files in os.walk(root_dir):
         count = 0
         for f in files:
-            if keyword in f:
+            if re.compile(keyword).search(f):
                 count += 1
         res[root] = count
 
