@@ -19,7 +19,6 @@ def search_directory(root_dir, keyword):
 def barplot(d):
     plt.bar(range(len(d)), d.values(), align="center")
     plt.xticks(range(len(d)), list(d.keys()))
-
     plt.show()
 
 
